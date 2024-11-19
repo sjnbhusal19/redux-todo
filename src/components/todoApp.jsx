@@ -8,8 +8,14 @@ const TodoApp = () => {
   const [todo, setTodo] = useState('')
 
   const todoData = useSelector((state) => state.todolist.value)
-  console.log(todoData)
   const dispatch = useDispatch()
+
+  const handleAdd = () => {
+    if (todo.trim() !== "") {
+      dispatch(addTodo(todo))
+      setTodo("")
+    }
+  }
 
 
   return (
@@ -18,38 +24,30 @@ const TodoApp = () => {
 
         <h3>Todo App</h3>
 
-        <input 
-        type='text'
-         placeholder='Enter your Todo'
+        <input
+          type='text'
+          placeholder='Enter your Todo'
           value={todo}
-          onChange={(e)=>setTodo(e.target.value)}
-          />
-        {/* <button onClick={() => dispatch(addTodo())} >Add</button> */}
+          onChange={(e) => setTodo(e.target.value)}
+        />
 
-        <button
-          onClick={() => {
-            if (todo.trim() !== "") {
-              dispatch(addTodo(todo))
-              setTodo("")
-            }
-          }}
-        >
-          Add
-          </button>
+        {/* <button onClick={() => dispatch(addTodo(todo))} >Add</button> */}
+
+        <button onClick={handleAdd}>  Add </button>
 
         {
           todoData.length > 0 && (
-            <div> 
+            <div>
               <h4>Todo list as:</h4>
 
-           { todoData.map((list,index) => (
-             <div key={index} className="todo-item">
-              {list}
-              <button onClick={() => dispatch(removeTodo(list))}>Delete</button>
-              </div>
-           ))}
-              </div>
-            )}
+              {todoData.map((list, index) => (
+                <div key={index} >
+                  {list}
+                  <button onClick={() => dispatch(removeTodo(list))}>Delete</button>
+                </div>
+              ))}
+            </div>
+          )}
       </div>
     </div>
 
