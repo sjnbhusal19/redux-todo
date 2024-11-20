@@ -1,0 +1,16 @@
+Project: "Personalized News Hub"
+Description:
+The Personalized News Hub is a news app designed for students to explore personalized news feeds based on 
+their preferences. The project focuses on practical skills in React, Redux, React Query, lazy loading, 
+and custom hooks. This streamlined version focus on core features such as personalization, bookmarking, 
+and lazy loading.
+
+Key Features
+User Preferences:
+Prompt users to set their preferred news categories (e.g., Science, Art, Politics, Technolology)
+Lazyloading where ever possible, react query and redux
+useDefferedValue
+Pagination
+
+Api
+https://newsapi.org/docs/get-started
