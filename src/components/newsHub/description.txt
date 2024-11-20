@@ -14,3 +14,8 @@ Pagination
 
 Api
 https://newsapi.org/docs/get-started
+
+
+how to make json server
+npm install json-server
+json-server --watch db.json --port 3031
