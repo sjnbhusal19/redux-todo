@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import NewsHub from './newsHub'
+import NewsHub from './navbar'
 import axios from "axios";
 
 

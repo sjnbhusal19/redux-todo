@@ -15,17 +15,29 @@ const NewsHub = () => {
       <Link to={'/'}>
       <div>Logo</div>
       </Link>
-<h4>Personalized News Hub</h4>
 
 <div className='flex gap-10 m-2 mr-10 '>
 
  <Link to={'/'}>
- <div className='hover:text-lg hover:font-semibold'>Home</div>
+ <div >Home</div>
  </Link> 
 
-  <div className='hover:text-lg hover:font-semibold'>About</div>
-  <div className='hover:text-lg hover:font-semibold'>Contact</div>
-  <div className='hover:text-lg hover:font-semibold'>Service</div>
+ <Link to={'/trending'} >
+ <div >Trending</div>
+ </Link>
+
+ <Link to={'/categories'}>
+ <div >Categories</div>
+ </Link> 
+
+ <Link to={'/favorites'}>
+ <div >Favorites</div>
+ </Link>
+
+  <div >Search Bar</div>
+
+  <div >Offline indicator</div>
+  <div >Profile</div>
   </div>
   </div>
   )

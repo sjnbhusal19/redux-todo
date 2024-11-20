@@ -10,12 +10,31 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import HomeNewsHub from './components/newsHub/home';
+import Trending from './components/newsHub/trending';
+import Categories from './components/newsHub/categories';
+import Favorites from './components/newsHub/favorites';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/home",
+    element: <HomeNewsHub />,
+  },
+  {
+    path: "/trending",
+    element: <Trending />,
+  },
+  {
+    path: "/categories",
+    element: <Categories />,
+  },
+  {
+    path: "/favorites",
+    element: <Favorites />,
   },
 ]);
 
